@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bgNav{
+  background-color: #00888f;
+}
+
+.linkNav{
+  color: white;
+  transition: 0.2s;
+}
+
+.linkNav :hover{
+  color: rgb(189, 39, 39);
+}
+
+.itemListContainer {
+  background-color: azure;
+  height: 15vh;
+}
+
+.paddingNone {
+  padding: 0;
+}
+
+.marginNone{
+  margin: 0;
+}
+
+.render-prod {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+@media (max-width: 600px) {
+  .render-prod {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .render-prod {
+    grid-template-columns: auto auto;
+  }
+}
+
+.contenedor-products {
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  height: 550px;
+}
+
+.contenedor-products:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-producto{
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 3px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.imagen-products{
+  width: 100%;
+  height: 250px;
+}
+
+.title-products{
+  position: absolute;
+  top: 3px;
+  left: 10%;
+  right: 10%;
+}
+
+.contenedor-detalle{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 85vh;
+  width: 95vw;
+}
+
+.contenedor-detalle:hover {
+  transform: scale(1.005);
+  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-detalle > img{
+  grid-column: 1;
+  width: 100%;
+  height: 74vh;
+  grid-row: span 6;
+}
+
+.contenedor-detalle > h1{
+  text-align: center;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.precio-detalle{
+  grid-column: 2;
+  grid-row: 2;
+  text-align: center;
+}
+
+.descripcion-detalle{
+  grid-column: 2;
+  grid-row: 3;
+  text-align: center;
+}
+
+.rate-detalle{
+  grid-column: 2;
+  grid-row: 4;
+  text-align: center;
+}
+
+.contador-stock{
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.ir-carrito-detalle{
+  grid-column: 2;
+  grid-row: 6;
+  text-align: center;
+}
+
+.boton-reiniciar-detalle{
+  grid-column: 2;
+  grid-row: 7;
+  text-align: center;
+}
+
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s ease infinite;
+}
+  
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contenedor-carrito{
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-height: 50vh;
+  max-width: 32vw;
+}
+
+.contenedor-carrito:hover {
+  transform: scale(1.005);
+  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-carrito > img{
+  grid-column: 1;
+  width: 100%;
+  height: 35vh;
+  grid-row: span 5;
+}
+
+.titulo-carrito{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.precio-carrito{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.cantidad-carrito{
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.total-parcial-carrito{
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.eliminar-producto-carrito{
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.render-carrito {
+  background: radial-gradient(#c7fbff, #f4faea);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  max-width: 100%;
+}
+
+.carrito-vacio {
+  background: radial-gradient(#dacece, #9094bd);
+}
+
+.borrar-productos {
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  height: 6vh;
+  width: 15vw;
+  background-color: rgb(255, 60, 0);
+  border: none;
+  color: white;
+  transition: 0.4s;
+}
+
+.borrar-productos:hover {
+  transform: scale(1.1);
+}
+
+.terminar-compra {
+  font-size: 1.8rem;
+  border-radius: 0.4rem;
+  height: 8vh;
+  width: 30vw;
+  background-color: rgb(66, 241, 50);
+  border: none;
+  color: white;
+  transition: 0.4s;
+}
+
+.terminar-compra:hover{
+  transform: scale(1.1);
+}
+
