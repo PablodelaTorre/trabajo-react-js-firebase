@@ -3,7 +3,8 @@ import ItemList from './ItemList'
 import { toast } from 'react-toastify'
 import { useParams } from 'react-router-dom'
 import Spinner from './Spinner'
-
+import { db } from '../firebase.js'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 
 const ItemListContainer = ({greeting}) => {
     
@@ -11,28 +12,27 @@ const ItemListContainer = ({greeting}) => {
     const [items,setItems] = useState([])
     
     const {categoryId} = useParams()
-    
 
     useEffect(()=>{
 
         toast.info("Cargando productos...")
-        const url = `https://fakestoreapi.com/products/${categoryId ? "/category/"+categoryId : ""}`
+        const productosCollection = collection(db,"productos")
         
-        const pedido = fetch(url)
+        const consulta = getDocs(productosCollection)
         
-        pedido.then((res)=>{
-            return res.json()        
-        })
-        .then((resultado)=>{
-            toast.dismiss()
-            setItems(resultado)
-        })
-        .catch(()=>{
-            toast.error("Error al cargar los productos")
-        })
-        .finally(()=>{
-            setLoading(false)
-        })
+        consulta
+            .then((resultado)=>{
+                const arrProductos = resultado.docs.map((doc)=>{
+                    return doc.data()
+                })
+                setItems(arrProductos)
+
+            }).catch(()=>{
+                toast.error("Error al cargar los productos")
+
+            }).finally(()=>{
+                setLoading(false)
+            })
     },[categoryId])
 
     if (loading){
