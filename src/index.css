@@ -34,15 +34,10 @@ body {
   grid-template-columns: auto auto auto auto;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 500px) {
   .render-prod {
     grid-template-columns: auto auto auto;
-  }
-}
-
-@media (max-width: 450px) {
-  .render-prod {
-    grid-template-columns: auto auto;
   }
 }
 
@@ -53,6 +48,7 @@ body {
   transition: all 0.3s ease;
   position: relative;
   height: 550px;
+  width: 22vw;
 }
 
 .contenedor-products:hover {
@@ -62,10 +58,7 @@ body {
 
 .detalle-producto{
   position: absolute;
-  left: 10%;
-  right: 10%;
   bottom: 3px;
-  margin-top: 1rem;
   text-align: center;
 }
 
@@ -75,10 +68,9 @@ body {
 }
 
 .title-products{
-  position: absolute;
+  
   top: 3px;
-  left: 10%;
-  right: 10%;
+  text-align: center;
 }
 
 .contenedor-detalle{

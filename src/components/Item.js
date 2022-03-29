@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Item = ({item}) => {
     return (
         <>
-            <div className="row mx-2 my-4">
-                <div className="border d-flex flex-column justify-content-center contenedor-products">
+            <div className="mx-2 my-4">
+                <div className="border row d-flex flex-column justify-content-center contenedor-products">
                     
                     <h1 className="fs-5 mb-6 d-flex justify-content-center title-products">{item.title}</h1>
                     <img src={item.image} className="card-img-top d-flex justify-content-center imagen-products mt-5" alt="..."/>
