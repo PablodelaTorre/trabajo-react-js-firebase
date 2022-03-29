@@ -14,13 +14,14 @@ const ItemListContainer = ({greeting}) => {
     const {categoryId} = useParams()
 
     useEffect(()=>{
-
-        toast.info("Cargando productos...")
-        const productosCollection = collection(db,"productos")
         
-        const consulta = getDocs(productosCollection)
+        if(!categoryId){
+            toast.info("Cargando productos...")
+            const productosCollection = collection(db,"productos")
         
-        consulta
+            const consulta = getDocs(productosCollection)
+        
+            consulta
             .then((resultado)=>{
                 const arrProductos = resultado.docs.map((doc)=>{
                     return doc.data()
@@ -33,6 +34,26 @@ const ItemListContainer = ({greeting}) => {
             }).finally(()=>{
                 setLoading(false)
             })
+        } else {
+            const productosCollection = collection(db, "productos")
+            const filtro = query(productosCollection,where("category","==", categoryId))
+            const consulta = getDocs(filtro)
+
+            consulta
+            .then((resultado)=>{
+                const arrProductos = resultado.docs.map((doc)=>{
+                    return doc.data()
+                })
+                setItems(arrProductos)
+
+            }).catch(()=>{
+                toast.error("Error al cargar los productos")
+
+            }).finally(()=>{
+                setLoading(false)
+            })
+        }
+        
     },[categoryId])
 
     if (loading){
