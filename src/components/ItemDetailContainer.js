@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import ItemDetail from './ItemDetail'
 import Spinner from './Spinner'
+import { db } from '../firebase.js'
+import { collection, getDoc, doc, query, where, getDocs } from 'firebase/firestore'
 
 
 
@@ -14,19 +16,17 @@ const ItemDetailContainer = () => {
 
     useEffect(()=>{
         toast.info("cargando detalle")
-        fetch(`https://fakestoreapi.com/products/${itemId}`)
-        .then((response)=>{
-            return response.json()
-        })
-        .then((res)=>{
-            console.log(res)
-            toast.dismiss()
-            setItem(res)
-        })
-        .catch(()=>{
-            toast.error("Error al cargar el detalle")
-        })
-        .finally(()=>{
+        const productosCollection = collection(db, "productos")
+        const filtro = query(productosCollection,where("id","==",Number(itemId)))
+        const pedido = getDocs(filtro)
+
+        pedido.then((resultado)=>{
+            setItem(resultado.docs[0].data())
+
+        }).catch(()=>{
+            toast.error("Error al cargar los productos")
+
+        }).finally(()=>{
             setLoading(false)
         })
     },[itemId])
