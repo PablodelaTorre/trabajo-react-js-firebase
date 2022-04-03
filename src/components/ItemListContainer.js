@@ -64,10 +64,10 @@ const ItemListContainer = ({greeting}) => {
         )
     }else{
         return (
-            <>
+            <div className='lista-productos'>
                 <div className='fs-2 fw-bold d-flex justify-content-center itemListContainer my-4 '>{greeting}</div>
                 <ItemList items={items}/>
-            </>
+            </div>
         )
     }
 }
