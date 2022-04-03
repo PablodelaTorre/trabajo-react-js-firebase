@@ -11,13 +11,13 @@ const NavBar = () => {
 
     if(calcCantidad()==0){
         return (
-            <nav className='container-fluid d-flex justify-content-between align-items-center bgNav'>
+            <nav className='container d-flex justify-content-between align-items-center bgNav'>
                 <Link to="/" className='text-decoration-none link-danger mx-1'><h1 className='fs-2'>Ecommerce</h1></Link>
                 <ul className='d-flex align-items-center list-unstyled paddingNone marginNone'>
-                    <li className='mx-3 linkNav'><Link className='text-decoration-none linkNav' to="/category/men's clothing">Ropa</Link></li>
-                    <li className='mx-3 linkNav'><Link className='text-decoration-none linkNav' to="/category/jewelry">Joyería</Link></li>
-                    <li className='mx-3 linkNav'><Link className='text-decoration-none linkNav' to="/category/electronics">Electrónicos</Link></li>
-                    <li className='mx-3'><Link to="/carrito" className='text-decoration-none link-danger'><CarWidget/></Link></li>
+                    <li className='mx-3'><Link className='text-decoration-none linkNav' to="/category/men's clothing">Ropa</Link></li>
+                    <li className='mx-3'><Link className='text-decoration-none linkNav' to="/category/jewelry">Joyería</Link></li>
+                    <li className='mx-3'><Link className='text-decoration-none linkNav' to="/category/electronics">Electrónicos</Link></li>
+                    <li className=''><Link to="/carrito" className='text-decoration-none link-danger'><CarWidget/></Link></li>
                 </ul>
             </nav>
         )
