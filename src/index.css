@@ -70,9 +70,13 @@ body {
 .detalle-producto{
   position: absolute;
   bottom: 3px;
-  background: rgba(250, 200, 50, 0.3);
-  text-decoration: none;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  box-shadow: 0px 2px 1px 0px;
+  color: white;
   max-height: 10vh;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -293,6 +297,9 @@ body {
     font-size: 0.8rem;
   }
   .cantidad-carrito{
+    font-size: 0.8rem;
+  }
+  .terminar-compra > p{
     font-size: 0.8rem;
   }
 }
