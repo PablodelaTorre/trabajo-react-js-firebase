@@ -1,12 +1,14 @@
 import React, {useContext} from 'react'
 import { contexto } from '../context/CartContext'
 import { Link } from 'react-router-dom'
+import Formulario from './Formulario'
 
 
 const Carrito = () => {
     
     const {carrito, removeItem, clear, calcCantidad, calcPrecioTotal} = useContext(contexto)
-    
+
+
 
     if (carrito == 0){
         return (
@@ -46,9 +48,9 @@ const Carrito = () => {
                     </button>
                 </div>
                 <div className='d-flex justify-content-center my-3'>
-                    <button className='terminar-compra'>
+                    <Link className='terminar-compra text-decoration-none d-flex justify-content-center' to="/formulario">
                             <p>Terminar compra</p>
-                    </button>
+                    </Link>
                 </div>
             </>
         )

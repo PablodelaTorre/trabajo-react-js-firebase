@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Carrito from './components/Carrito'
 import Footer from './components/Footer'
 import MiProvider from "./context/CartContext"
+import Formulario from './components/Formulario'
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/category/:categoryId" element={<ItemListContainer greeting="Productos:"/>}/>
           <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
           <Route path="/carrito" element={<Carrito/>}/>    
+          <Route path="/formulario" element={<Formulario/>}/>
         </Routes>
         <Footer/>
       </MiProvider>  

@@ -264,8 +264,9 @@ body {
     font-size: 0.8rem;
   }
 
-  .terminar-compra > p{
+  .terminar-compra > {
     font-size: 1rem;
+    color: white;
   }
 
   .contenedor-carrito{
@@ -314,7 +315,7 @@ body {
   border-radius: 0.4rem;
   height: 6vh;
   width: 18vw;
-  background-color: rgba(255, 60, 0, 0.7);
+  background-color: rgba(68, 33, 23, 0.7);
   border: none;
   color: white;
   transition: 0.4s;
@@ -342,4 +343,40 @@ body {
 .footer > p{
   padding: 0px;
   margin: 1rem 0rem;
+}
+
+.form-nombre{
+  width: 40vw;
+  border: none;
+  box-shadow: 1px 1px 1px;
+  border-radius: 0.5rem;
+  height: 10vh;
+}
+
+.form-telefono{
+  width: 40vw;
+  border: none;
+  box-shadow: 1px 1px 1px;
+  border-radius: 0.5rem;
+  height: 10vh;
+}
+
+.form-email{
+  width: 40vw;
+  border: none;
+  box-shadow: 1px 1px 1px;
+  border-radius: 0.5rem;
+  height: 10vh;
+}
+
+.formulario-compra{
+  background-color: bisque;
+}
+
+.boton-terminado{
+  width: 30vw;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  background-color: rgba(0, 200, 0, 0.4);
 }
