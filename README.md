@@ -1,4 +1,5 @@
-# Sobre la Página: 
+# Ecommerce
+## Descripción del sitio: 
 ### Se trata de una simulación de un Ecommerce, que toma productos de una base de datos realizada en firebase/firestore ,y los visualiza en pantalla con sus distintos datos.
 ### Además permite filtrar los productos por categorías, renderizando solo aquellos productos pertenecientes a una determinada categoría.
 ### También permite entrar en el detalle de un producto, para que el usuario pueda tener mas información sobre el mismo, y para que pueda acceder al contador, esto para poder seleccionar la cantidad  que se quiera comprar(el contador no permite agregar mas productos que los que haya en stock). Al ir agregando items al carrito, al lado del símbolo del carrito (en el navbar) se visualizara un contador que mostrará la suma de todas las cantidades de todos los productos seleccionados.
@@ -8,11 +9,18 @@
 
 ||
 
+## [Link al host]()
+
+||
+
 # GIF con ejemplo de la navegación en el sitio:
 ![](public/multimedia/GIF-ecommmerce.gif)
 
 ||
-# Estructura del sitio web:
+
+## Estructura del sitio web:
+
+![](public/multimedia/estructura-del-sitio.png)
 
 ### Index.js (contiene el render) => App.js(componente hijo)
 
@@ -28,6 +36,23 @@
 ||
 ### ItemDetailContainer.js:
 ### => ItemDetail.js => ItemCount.js
+### => Carrito.js => Formulario.js
 ||
 ### Footer.js (sin componentes hijos)
+
+||
+## Técnologías utilizadas
+* React v17.0.2
+* Bootstrap v5.1.3
+* Firebase v9.6.10
+* Rc-rate v2.9.1
+* React-dom v17.0.2
+* React-router-dom v6.2.2
+* React-toastify v8.2.0
+
+||
+## Uso / instalación
+1. git clone https://github.com/PablodelaTorre/trabajo-react-js-firebase.git 
+2. Si no se tienen instaladas todas las tecnologías del punto anterior, deberá instalarlas para posibilitar el funcionamiento de la aplicación.
+3. (Sobre directorio descargado) npm run start
 
