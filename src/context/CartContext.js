@@ -49,16 +49,6 @@ const MiProvider = ({ children }) => {
         return precioTotal;  
     }
 
-    const [form, setForm] = useState({})
-
-    const handleChange = (e) =>{
-        const {name, value} = e.target
-        setForm({
-            ...form,
-            [name]: value
-        })
-    }
-
     const valorDelContexto = {
         carrito,      
         addItem,
@@ -66,11 +56,7 @@ const MiProvider = ({ children }) => {
         removeItem,
         calcCantidad: calcCantidad,
         calcPrecioTotal: calcPrecioTotal,
-        handleChange,
-        form
     }
-
-    
 
     return (
         <Provider value={valorDelContexto}>
