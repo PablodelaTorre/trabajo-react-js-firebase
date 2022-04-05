@@ -1,15 +1,10 @@
 import React from 'react'
 
 const CarWidget = () => {
-
-    
-
-    return (
-        
+    return (    
         <span class="material-icons md-48">
             shopping_cart
-        </span>
-        
+        </span>    
     )
 }
 

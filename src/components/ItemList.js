@@ -5,7 +5,6 @@ const ItemList = ({items}) => {
     
 
     return (
-        
         <section className='render-prod'>
                 {items.map(item => {
                     return(    

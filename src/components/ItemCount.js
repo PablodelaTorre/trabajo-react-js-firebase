@@ -25,11 +25,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
         onAdd(estado)
     }
 
-    // const onAdd = () => {
-    //     console.log("Desea comprar la cantidad de : " + estado + " productos")
-    // }
-
-
     return (
         <>
             <div className='d-flex align-items-center justify-content-center'>

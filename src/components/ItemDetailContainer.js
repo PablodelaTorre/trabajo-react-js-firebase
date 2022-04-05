@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 import ItemDetail from './ItemDetail'
 import Spinner from './Spinner'
 import { db } from '../firebase.js'
-import { collection, getDoc, doc, query, where, getDocs } from 'firebase/firestore'
+import { collection, query, where, getDocs } from 'firebase/firestore'
 
 
 
